@@ -1,0 +1,20 @@
+# Core GUI Framework - Try PySide6 first, PyQt6 as fallback
+PySide6>=6.4.0
+# PyQt6>=6.4.0  # Alternative if PySide6 doesn't work
+
+# Data handling
+numpy>=1.21.0
+pandas>=1.3.0
+
+# Optional: LAS file handling (if you want to process files directly in Python)
+# laspy>=2.3.0
+
+# Optional: Additional scientific computing
+# scikit-learn>=1.0.0  # You mentioned you have this
+
+# JSON schema validation (optional)
+jsonschema>=4.0.0
+
+# Testing (optional)
+pytest>=7.0.0
+pytest-cov>=3.0.0

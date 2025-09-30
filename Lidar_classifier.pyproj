@@ -1,0 +1,88 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>81f04e9b-8ccc-4f73-81dd-6ea67ad92430</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>main.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>Lidar_classifier</Name>
+    <RootNamespace>Lidar_classifier</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="core\classification.py" />
+    <Compile Include="core\orchestrator.py" />
+    <Compile Include="core\tiling.py" />
+    <Compile Include="core\validators.py" />
+    <Compile Include="core\__init__.py" />
+    <Compile Include="gui\main_window.py" />
+    <Compile Include="gui\widgets\file_selector.py" />
+    <Compile Include="gui\widgets\log_viewer.py" />
+    <Compile Include="gui\widgets\progress_tracker.py" />
+    <Compile Include="gui\widgets\__init__.py" />
+    <Compile Include="gui\__init__.py" />
+    <Compile Include="file_io\manifest.py" />
+    <Compile Include="file_io\reports.py" />
+    <Compile Include="file_io\__init__.py" />
+    <Compile Include="main.py" />
+    <Compile Include="pipeline\config.py" />
+    <Compile Include="pipeline\presets.py" />
+    <Compile Include="pipeline\__init__.py" />
+    <Compile Include="qc\false_positive_suppressor.py" />
+    <Compile Include="qc\overlap_resolver.py" />
+    <Compile Include="qc\post_processor.py" />
+    <Compile Include="qc\__init__.py" />
+    <Compile Include="setup.py" />
+    <Compile Include="tools\base.py" />
+    <Compile Include="tools\lasclassify.py" />
+    <Compile Include="tools\lasground.py" />
+    <Compile Include="tools\lasheight.py" />
+    <Compile Include="tools\lasmerge.py" />
+    <Compile Include="tools\lastile.py" />
+    <Compile Include="tools\__init__.py" />
+    <Compile Include="utils\subprocess_manager.py" />
+    <Compile Include="utils\temp_manager.py" />
+    <Compile Include="utils\__init__.py" />
+    <Compile Include="__init__.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="gui\" />
+    <Folder Include="gui\widgets\" />
+    <Folder Include="core\" />
+    <Folder Include="file_io\" />
+    <Folder Include="configs\" />
+    <Folder Include="scripts\" />
+    <Folder Include="utils\" />
+    <Folder Include="pipeline\" />
+    <Folder Include="qc\" />
+    <Folder Include="tools\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="configs\urban_balanced.json" />
+    <Content Include="configs\urban_conservative.json" />
+    <Content Include="configs\urban_high_recall.json" />
+    <Content Include="readme.md" />
+    <Content Include="scripts\launcher.bat" />
+    <Content Include="scripts\launcher.sh" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
